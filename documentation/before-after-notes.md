@@ -4,7 +4,7 @@
 ![Before](../screenshots/Before-Design.png)
 
 ## After
-![After](../screenshots/hore-section.png)
+![After](../screenshots/hero-section.png)
 
 ![After](../screenshots/features-section.png)
 
