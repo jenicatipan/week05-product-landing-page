@@ -1,0 +1,77 @@
+@import "tailwindcss";
+
+/* ---------------------------------------------------------
+   Kafe Lema — design tokens
+   Palette drawn from the logo (coffee brown + cream) with a
+   forest green accent for the sustainability messaging.
+--------------------------------------------------------- */
+@theme {
+    --color-ink: #2A1F1A;
+    --color-stone: #F8F5EE;
+    --color-stone-2: #EFE9DB;
+    --color-coffee: #5C3A2E;
+    --color-amber: #B98549;
+    --color-amber-dark: #97652F;
+    --color-olive: #3F5D44;
+    --color-line: #DDD3C4;
+
+    --font-display: "Playfair Display", ui-serif, Georgia, serif;
+    --font-body: "Work Sans", ui-sans-serif, system-ui, sans-serif;
+}
+
+body {
+    background-color: var(--color-stone);
+    color: var(--color-ink);
+    font-family: var(--font-body);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.nav-link {
+    position: relative;
+    transition: color 150ms ease;
+}
+
+.nav-link::after {
+    position: absolute;
+    right: 0;
+    bottom: -0.45rem;
+    left: 0;
+    height: 2px;
+    background-color: var(--color-amber);
+    content: "";
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 150ms ease;
+}
+
+.nav-link.is-active {
+    color: var(--color-ink);
+    font-weight: 500;
+}
+
+.nav-link.is-active::after {
+    transform: scaleX(1);
+}
+
+@media (max-width: 1023px) {
+    .nav-link.is-active {
+        color: var(--color-amber-dark);
+    }
+
+    .nav-link::after {
+        display: none;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+    * {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+    }
+}
