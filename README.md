@@ -145,7 +145,7 @@ markup is written once and called three times with different props
 
 - [x] Mobile View — [`mobile-layout.png`](screenshots/mobile-layout.png)
 
-- [x] Navigation Bar (open + mobile menu open) — [`navigation.png`](screenshots/navigation.png)
+- [x] Navigation Bar — [`navigation.png`](screenshots/navigation.png)
 
 - [x] Hero Section — [`hero-section.png`](screenshots/hero-section.png)
 
